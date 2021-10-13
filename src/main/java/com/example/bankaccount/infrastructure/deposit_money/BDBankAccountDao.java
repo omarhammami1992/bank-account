@@ -1,19 +1,19 @@
-package com.example.bankaccount.infrastructure.withdraw_money;
+package com.example.bankaccount.infrastructure.deposit_money;
 
 import com.example.bankaccount.common.domain.AccountId;
 import com.example.bankaccount.common.infrastructure.entity.Account;
 import com.example.bankaccount.common.infrastructure.entity.Operation;
 import com.example.bankaccount.common.infrastructure.repository.AccountRepository;
-import com.example.bankaccount.domain.withdraw_money.BankAccount;
-import com.example.bankaccount.domain.withdraw_money.BankAccountDao;
-import com.example.bankaccount.domain.withdraw_money.BankOperation;
+import com.example.bankaccount.domain.deposit_money.BankAccount;
+import com.example.bankaccount.domain.deposit_money.BankAccountDao;
+import com.example.bankaccount.domain.deposit_money.BankOperation;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Repository("withdraw_money.BDBankAccountDao")
+@Repository("deposit_money.BDBankAccountDao")
 public class BDBankAccountDao implements BankAccountDao {
 
     private final AccountRepository accountRepository;
