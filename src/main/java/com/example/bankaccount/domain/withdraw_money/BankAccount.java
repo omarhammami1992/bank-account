@@ -2,6 +2,7 @@ package com.example.bankaccount.domain.withdraw_money;
 
 import com.example.bankaccount.common.domain.AccountId;
 import com.example.bankaccount.common.domain.BankOperationType;
+import com.example.bankaccount.common.domain.WithdrawException;
 
 import java.util.List;
 

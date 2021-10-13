@@ -1,7 +1,7 @@
 package com.example.bankaccount.infrastructure.deposit_money;
 
 import com.example.bankaccount.common.domain.AccountId;
-import com.example.bankaccount.domain.deposit_money.NotFoundBankAccount;
+import com.example.bankaccount.common.domain.NotFoundBankAccount;
 import com.example.bankaccount.use_case.DepositMoney;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

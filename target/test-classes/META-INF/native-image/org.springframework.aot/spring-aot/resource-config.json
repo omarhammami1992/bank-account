@@ -68,6 +68,15 @@
         "pattern": "com/example/bankaccount/common/domain/AccountIdUTest$toString.class"
       },
       {
+        "pattern": "com/example/bankaccount/common/domain/IbanUTest$ConstructorShould.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/common/domain/IbanUTest$EqualsShould.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/common/domain/IbanUTest$toString.class"
+      },
+      {
         "pattern": "com/example/bankaccount/common/infrastructure/entity/Account.class"
       },
       {
@@ -92,6 +101,9 @@
         "pattern": "com/example/bankaccount/domain/withdraw_money/BankAccountDao.class"
       },
       {
+        "pattern": "com/example/bankaccount/infrastructure/create_account/AccountControllerUTest$CreateAccountShould.class"
+      },
+      {
         "pattern": "com/example/bankaccount/infrastructure/create_account/BDAccountDao.class"
       },
       {
@@ -101,13 +113,34 @@
         "pattern": "com/example/bankaccount/infrastructure/create_account/RandomIbanService.class"
       },
       {
+        "pattern": "com/example/bankaccount/infrastructure/deposit_money/BDBankAccountDaoUTest$FindShould.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/infrastructure/deposit_money/BDBankAccountDaoUTest$Save.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/infrastructure/deposit_money/DepositControllerUTest$DepositShould.class"
+      },
+      {
         "pattern": "com/example/bankaccount/infrastructure/withdraw_money/BDBankAccountDao.class"
       },
       {
         "pattern": "com/example/bankaccount/infrastructure/withdraw_money/BDBankAccountDaoUTest$FindShould.class"
       },
       {
+        "pattern": "com/example/bankaccount/infrastructure/withdraw_money/BDBankAccountDaoUTest$Save.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/infrastructure/withdraw_money/WithdrawControllerUTest$WithdrawShould.class"
+      },
+      {
         "pattern": "com/example/bankaccount/use_case/CreateAccountUTest$Run.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/use_case/DepositMoneyUTest$Run.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/use_case/TransferMoneyUTest$Run.class"
       },
       {
         "pattern": "com/example/bankaccount/use_case/WithdrawMoneyUTest$Run.class"

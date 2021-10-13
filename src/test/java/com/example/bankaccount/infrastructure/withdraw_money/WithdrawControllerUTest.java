@@ -1,8 +1,8 @@
 package com.example.bankaccount.infrastructure.withdraw_money;
 
 import com.example.bankaccount.common.domain.AccountId;
-import com.example.bankaccount.domain.withdraw_money.NotFoundBankAccount;
-import com.example.bankaccount.domain.withdraw_money.WithdrawException;
+import com.example.bankaccount.common.domain.NotFoundBankAccount;
+import com.example.bankaccount.common.domain.WithdrawException;
 import com.example.bankaccount.use_case.WithdrawMoney;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;

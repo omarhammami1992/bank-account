@@ -3,7 +3,7 @@ package com.example.bankaccount.use_case;
 import com.example.bankaccount.common.domain.AccountId;
 import com.example.bankaccount.domain.deposit_money.BankAccount;
 import com.example.bankaccount.domain.deposit_money.BankAccountDao;
-import com.example.bankaccount.domain.deposit_money.NotFoundBankAccount;
+import com.example.bankaccount.common.domain.NotFoundBankAccount;
 
 import java.util.Optional;
 

@@ -5,7 +5,7 @@ import com.example.bankaccount.common.domain.BankOperationType;
 import com.example.bankaccount.domain.deposit_money.BankAccount;
 import com.example.bankaccount.domain.deposit_money.BankAccountDao;
 import com.example.bankaccount.domain.deposit_money.BankOperation;
-import com.example.bankaccount.domain.deposit_money.NotFoundBankAccount;
+import com.example.bankaccount.common.domain.NotFoundBankAccount;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

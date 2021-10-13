@@ -1,4 +1,4 @@
-package com.example.bankaccount.domain.deposit_money;
+package com.example.bankaccount.common.domain;
 
 public class NotFoundBankAccount extends Exception {
 }

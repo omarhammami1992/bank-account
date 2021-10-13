@@ -6,7 +6,7 @@ import com.example.bankaccount.common.domain.Iban;
 import com.example.bankaccount.domain.transfer_money.BankAccount;
 import com.example.bankaccount.domain.transfer_money.BankAccountDao;
 import com.example.bankaccount.domain.transfer_money.BankOperation;
-import com.example.bankaccount.domain.transfer_money.WithdrawException;
+import com.example.bankaccount.common.domain.WithdrawException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -16,7 +16,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 

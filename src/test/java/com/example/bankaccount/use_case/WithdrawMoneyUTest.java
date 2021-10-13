@@ -2,11 +2,11 @@ package com.example.bankaccount.use_case;
 
 import com.example.bankaccount.common.domain.AccountId;
 import com.example.bankaccount.common.domain.BankOperationType;
-import com.example.bankaccount.domain.withdraw_money.NotFoundBankAccount;
+import com.example.bankaccount.common.domain.NotFoundBankAccount;
+import com.example.bankaccount.common.domain.WithdrawException;
 import com.example.bankaccount.domain.withdraw_money.BankAccount;
 import com.example.bankaccount.domain.withdraw_money.BankAccountDao;
 import com.example.bankaccount.domain.withdraw_money.BankOperation;
-import com.example.bankaccount.domain.withdraw_money.WithdrawException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

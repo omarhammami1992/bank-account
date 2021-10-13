@@ -113,6 +113,24 @@
     "allDeclaredMethods": true
   },
   {
+    "name": "com.example.bankaccount.common.domain.IbanUTest$ConstructorShould",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.common.domain.IbanUTest$EqualsShould",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.common.domain.IbanUTest$toString",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
     "name": "com.example.bankaccount.common.infrastructure.entity.Account",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
@@ -176,6 +194,12 @@
     "allPublicMethods": true
   },
   {
+    "name": "com.example.bankaccount.infrastructure.create_account.AccountControllerUTest$CreateAccountShould",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
     "name": "com.example.bankaccount.infrastructure.create_account.BDAccountDao",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
@@ -198,6 +222,24 @@
     "allDeclaredClasses": true
   },
   {
+    "name": "com.example.bankaccount.infrastructure.deposit_money.BDBankAccountDaoUTest$FindShould",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.infrastructure.deposit_money.BDBankAccountDaoUTest$Save",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.infrastructure.deposit_money.DepositControllerUTest$DepositShould",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
     "name": "com.example.bankaccount.infrastructure.withdraw_money.BDBankAccountDao",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
@@ -212,7 +254,31 @@
     "allDeclaredMethods": true
   },
   {
+    "name": "com.example.bankaccount.infrastructure.withdraw_money.BDBankAccountDaoUTest$Save",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.infrastructure.withdraw_money.WithdrawControllerUTest$WithdrawShould",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
     "name": "com.example.bankaccount.use_case.CreateAccountUTest$Run",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.use_case.DepositMoneyUTest$Run",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.use_case.TransferMoneyUTest$Run",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true
