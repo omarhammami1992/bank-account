@@ -24,6 +24,6 @@ public class BankAccount {
     }
 
     public void depositMoney(Float amount) {
-        bankOperations.add(new BankOperation(BankOperationType.DEPOSIT, amount));
+        bankOperations.add(new BankOperation(BankOperationType.CREDIT, amount));
     }
 }

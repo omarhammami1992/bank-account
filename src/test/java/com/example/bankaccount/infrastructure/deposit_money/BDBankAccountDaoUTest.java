@@ -8,7 +8,6 @@ import com.example.bankaccount.common.infrastructure.repository.AccountRepositor
 import com.example.bankaccount.domain.deposit_money.BankAccount;
 import com.example.bankaccount.domain.deposit_money.BankAccountDao;
 import com.example.bankaccount.domain.deposit_money.BankOperation;
-import com.example.bankaccount.infrastructure.deposit_money.BDBankAccountDao;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -48,7 +47,7 @@ class BDBankAccountDaoUTest {
             when(account.getId()).thenReturn(accountIdValue);
 
             final int operationId = 1;
-            final BankOperationType bankOperationType = BankOperationType.DEPOSIT;
+            final BankOperationType bankOperationType = BankOperationType.CREDIT;
             final Float amount = 30f;
             final Operation operation = new Operation(operationId, bankOperationType, amount);
 
@@ -88,7 +87,7 @@ class BDBankAccountDaoUTest {
         @Test
         void should_call_accountRepository() {
             // given
-            final BankOperationType bankOperationType = BankOperationType.DEPOSIT;
+            final BankOperationType bankOperationType = BankOperationType.CREDIT;
             final float amount = 10f;
             final BankOperation bankOperation = new BankOperation(bankOperationType, amount);
             final int accountIdValue = 123;

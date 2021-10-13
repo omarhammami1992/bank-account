@@ -27,19 +27,19 @@ public class BankAccount {
     public void withdrawMoney(Float amount) throws WithdrawException {
         final Float accountBudget = computeAccountBudget();
         if(accountBudget > amount) {
-            bankOperations.add(new BankOperation(BankOperationType.WITHDRAW, amount));
+            bankOperations.add(new BankOperation(BankOperationType.DEBIT, amount));
         } else {
             throw new WithdrawException();
         }
     }
 
     public void depositMoney(Float amount) {
-        bankOperations.add(new BankOperation(BankOperationType.DEPOSIT, amount));
+        bankOperations.add(new BankOperation(BankOperationType.CREDIT, amount));
     }
 
     private Float computeAccountBudget() {
         return bankOperations.stream().map(bankOperation -> {
-            if (bankOperation.getBankOperationType().equals(BankOperationType.WITHDRAW)) {
+            if (bankOperation.getBankOperationType().equals(BankOperationType.DEBIT)) {
                 return -bankOperation.getAmount();
             } else {
                 return bankOperation.getAmount();

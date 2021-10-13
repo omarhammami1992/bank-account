@@ -60,12 +60,6 @@
     "allDeclaredMethods": true
   },
   {
-    "name": "com.example.bankaccount.BankAccountApplicationTests",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
     "name": "com.example.bankaccount.common.domain.AccountIdUTest$ConstructorShould",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
@@ -90,12 +84,12 @@
     "allDeclaredMethods": true,
     "fields": [
       {
-        "name": "WITHDRAW",
+        "name": "DEBIT",
         "allowWrite": true,
         "allowUnsafeAccess": true
       },
       {
-        "name": "DEPOSIT",
+        "name": "CREDIT",
         "allowWrite": true,
         "allowUnsafeAccess": true
       },
@@ -240,6 +234,24 @@
     "allDeclaredMethods": true
   },
   {
+    "name": "com.example.bankaccount.infrastructure.transfer_money.BDBankAccountDaoUTest$FindByIdIban",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.infrastructure.transfer_money.BDBankAccountDaoUTest$FindByIdShould",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.infrastructure.transfer_money.BDBankAccountDaoUTest$Save",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
     "name": "com.example.bankaccount.infrastructure.withdraw_money.BDBankAccountDao",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
@@ -279,6 +291,12 @@
   },
   {
     "name": "com.example.bankaccount.use_case.TransferMoneyUTest$Run",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.use_case.TransferMoneyUTest$Run$WhenTransferSucceeded",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true

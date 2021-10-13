@@ -56,9 +56,6 @@
         "pattern": "com/example/bankaccount/BankAccountApplication.class"
       },
       {
-        "pattern": "com/example/bankaccount/BankAccountApplicationTests.class"
-      },
-      {
         "pattern": "com/example/bankaccount/common/domain/AccountIdUTest$ConstructorShould.class"
       },
       {
@@ -122,6 +119,15 @@
         "pattern": "com/example/bankaccount/infrastructure/deposit_money/DepositControllerUTest$DepositShould.class"
       },
       {
+        "pattern": "com/example/bankaccount/infrastructure/transfer_money/BDBankAccountDaoUTest$FindByIdIban.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/infrastructure/transfer_money/BDBankAccountDaoUTest$FindByIdShould.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/infrastructure/transfer_money/BDBankAccountDaoUTest$Save.class"
+      },
+      {
         "pattern": "com/example/bankaccount/infrastructure/withdraw_money/BDBankAccountDao.class"
       },
       {
@@ -138,6 +144,9 @@
       },
       {
         "pattern": "com/example/bankaccount/use_case/DepositMoneyUTest$Run.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/use_case/TransferMoneyUTest$Run$WhenTransferSucceeded.class"
       },
       {
         "pattern": "com/example/bankaccount/use_case/TransferMoneyUTest$Run.class"
