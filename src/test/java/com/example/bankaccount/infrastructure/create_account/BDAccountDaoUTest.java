@@ -1,5 +1,6 @@
 package com.example.bankaccount.infrastructure.create_account;
 
+import com.example.bankaccount.common.domain.Iban;
 import com.example.bankaccount.common.infrastructure.entity.Account;
 import com.example.bankaccount.common.infrastructure.repository.AccountRepository;
 import com.example.bankaccount.domain.create_account.AccountDao;
@@ -38,10 +39,10 @@ class BDAccountDaoUTest {
             when(accountToSave.getFirstName()).thenReturn(firstName);
             final String lastName = "Hammami";
             when(accountToSave.getLastName()).thenReturn(lastName);
-            final String iban = "FR76000000000000000000000000";
-            when(accountToSave.getIban()).thenReturn(iban);
+            final String ibanValue = "FR76000000000000000000000000";
+            when(accountToSave.getIban()).thenReturn(new Iban(ibanValue));
 
-            Account account = new Account(firstName, lastName, iban);
+            Account account = new Account(firstName, lastName, ibanValue);
 
             // when
             accountDao.save(accountToSave);

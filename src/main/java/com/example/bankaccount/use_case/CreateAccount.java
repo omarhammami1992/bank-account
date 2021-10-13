@@ -1,5 +1,6 @@
 package com.example.bankaccount.use_case;
 
+import com.example.bankaccount.common.domain.Iban;
 import com.example.bankaccount.domain.create_account.*;
 
 public class CreateAccount {
@@ -13,8 +14,8 @@ public class CreateAccount {
     }
 
     public void run(UserInfo userInfo) throws InvalidUserInfoException {
-        final String iban = ibanService.generate();
-        AccountToSave accountToSave = AccountToSave.create(userInfo, iban);
+        final Iban iban = ibanService.generate();
+        AccountToSave accountToSave = new AccountToSave(userInfo, iban);
         accountDao.save(accountToSave);
     }
 }

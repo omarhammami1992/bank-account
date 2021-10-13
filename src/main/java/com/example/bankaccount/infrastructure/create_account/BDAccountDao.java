@@ -17,7 +17,7 @@ public class BDAccountDao implements AccountDao {
 
     @Override
     public void save(AccountToSave accountToSave) {
-        Account account = new Account(accountToSave.getFirstName(), accountToSave.getLastName(), accountToSave.getIban());
+        Account account = new Account(accountToSave.getFirstName(), accountToSave.getLastName(), accountToSave.getIban().toString());
         accountRepository.save(account);
 
     }

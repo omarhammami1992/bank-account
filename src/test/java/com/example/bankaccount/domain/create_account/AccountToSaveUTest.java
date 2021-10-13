@@ -1,5 +1,6 @@
 package com.example.bankaccount.domain.create_account;
 
+import com.example.bankaccount.common.domain.Iban;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -21,7 +22,7 @@ class AccountToSaveUTest {
     class Create {
         final String firstName = "Omar";
         final String lastName = "Hammami";
-        final String iban = "FR76000000000000000000000000";
+        final Iban iban = new Iban("FR76000000000000000000000000");
 
         @Nested
         class WhenValidUserInfoShouldBind {
@@ -35,7 +36,7 @@ class AccountToSaveUTest {
             @Test
             void firstName() throws InvalidUserInfoException {
                 // when
-                AccountToSave accountToSave = AccountToSave.create(userInfo, iban);
+                AccountToSave accountToSave = new AccountToSave(userInfo, iban);
 
                 // then
                 assertThat(accountToSave.getFirstName()).isEqualTo(firstName);
@@ -44,7 +45,7 @@ class AccountToSaveUTest {
             @Test
             void lastName() throws InvalidUserInfoException {
                 // when
-                AccountToSave accountToSave = AccountToSave.create(userInfo, iban);
+                AccountToSave accountToSave = new AccountToSave(userInfo, iban);
 
                 // then
                 assertThat(accountToSave.getLastName()).isEqualTo(lastName);
@@ -53,7 +54,7 @@ class AccountToSaveUTest {
             @Test
             void iban() throws InvalidUserInfoException {
                 // when
-                AccountToSave accountToSave = AccountToSave.create(userInfo, iban);
+                AccountToSave accountToSave = new AccountToSave(userInfo, iban);
 
                 // then
                 assertThat(accountToSave.getIban()).isEqualTo(iban);
@@ -67,7 +68,7 @@ class AccountToSaveUTest {
             when(userInfo.getFirstName()).thenReturn(null);
 
             // when
-            final Throwable throwable = catchThrowable(() -> AccountToSave.create(userInfo, iban));
+            final Throwable throwable = catchThrowable(() -> new AccountToSave(userInfo, iban));
 
             // then
             assertThat(throwable).isInstanceOf(InvalidUserInfoException.class);
@@ -80,7 +81,7 @@ class AccountToSaveUTest {
             when(userInfo.getLastName()).thenReturn(null);
 
             // when
-            final Throwable throwable = catchThrowable(() -> AccountToSave.create(userInfo, iban));
+            final Throwable throwable = catchThrowable(() -> new AccountToSave(userInfo, iban));
 
             // then
             assertThat(throwable).isInstanceOf(InvalidUserInfoException.class);

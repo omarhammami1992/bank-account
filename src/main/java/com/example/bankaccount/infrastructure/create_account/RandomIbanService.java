@@ -1,5 +1,6 @@
 package com.example.bankaccount.infrastructure.create_account;
 
+import com.example.bankaccount.common.domain.Iban;
 import com.example.bankaccount.domain.create_account.IbanService;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import java.util.UUID;
 public class RandomIbanService implements IbanService {
 
     @Override
-    public String generate() {
-        return UUID.randomUUID().toString();
+    public Iban generate() {
+        return new Iban("FR" + UUID.randomUUID());
     }
 }
