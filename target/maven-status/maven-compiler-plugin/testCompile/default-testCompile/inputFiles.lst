@@ -1,0 +1,7 @@
+/home/soat/Bureau/Master class TDD/bank-account/src/test/java/com/example/bankaccount/BankAccountApplicationTests.java
+/home/soat/Bureau/Master class TDD/bank-account/src/test/java/com/example/bankaccount/common/domain/AccountIdUTest.java
+/home/soat/Bureau/Master class TDD/bank-account/src/test/java/com/example/bankaccount/use_case/CreateAccountUTest.java
+/home/soat/Bureau/Master class TDD/bank-account/src/test/java/com/example/bankaccount/infrastructure/create_account/BDAccountDaoUTest.java
+/home/soat/Bureau/Master class TDD/bank-account/src/test/java/com/example/bankaccount/domain/create_account/AccountToSaveUTest.java
+/home/soat/Bureau/Master class TDD/bank-account/src/test/java/com/example/bankaccount/infrastructure/withdraw_money/BDBankAccountDaoUTest.java
+/home/soat/Bureau/Master class TDD/bank-account/src/test/java/com/example/bankaccount/use_case/WithdrawMoneyUTest.java

@@ -1,6 +1,6 @@
 package com.example.bankaccount.use_case;
 
-import com.example.bankaccount.domain.*;
+import com.example.bankaccount.domain.create_account.*;
 
 public class CreateAccount {
 
