@@ -6,8 +6,10 @@ public class AccountToSave {
 
     private final String firstName;
     private final String lastName;
+    private final String iban;
 
-    private AccountToSave(UserInfo userInfo) throws InvalidUserInfoException {
+    private AccountToSave(UserInfo userInfo, String iban) throws InvalidUserInfoException {
+        this.iban = iban;
         if (isBlank(userInfo.getFirstName()) || isBlank(userInfo.getLastName())) {
             throw new InvalidUserInfoException();
         }
@@ -15,8 +17,8 @@ public class AccountToSave {
         lastName = userInfo.getLastName();
     }
 
-    public static AccountToSave create(UserInfo userInfo) throws InvalidUserInfoException {
-        return new AccountToSave(userInfo);
+    public static AccountToSave create(UserInfo userInfo, String iban) throws InvalidUserInfoException {
+        return new AccountToSave(userInfo, iban);
     }
 
     public String getFirstName() {
@@ -25,5 +27,9 @@ public class AccountToSave {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getIban() {
+        return iban;
     }
 }

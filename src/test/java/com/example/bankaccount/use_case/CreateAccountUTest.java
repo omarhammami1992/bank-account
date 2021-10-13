@@ -1,9 +1,6 @@
 package com.example.bankaccount.use_case;
 
-import com.example.bankaccount.domain.AccountDao;
-import com.example.bankaccount.domain.AccountToSave;
-import com.example.bankaccount.domain.InvalidUserInfoException;
-import com.example.bankaccount.domain.UserInfo;
+import com.example.bankaccount.domain.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -23,9 +20,12 @@ class CreateAccountUTest {
     @Mock
     private AccountDao accountDao;
 
+    @Mock
+    private IbanService ibanService;
+
     @BeforeEach
     void setUp() {
-        createAccount = new CreateAccount(accountDao);
+        createAccount = new CreateAccount(accountDao, ibanService);
     }
 
     @Nested
@@ -33,11 +33,14 @@ class CreateAccountUTest {
         @Test
         void should_call_accountDao_save() throws InvalidUserInfoException {
             // given
+            final String iban = "FR76000000000000000000000000";
+            when(ibanService.generate()).thenReturn(iban);
+
             UserInfo userInfo = mock(UserInfo.class);
             when(userInfo.getFirstName()).thenReturn("Omar");
             when(userInfo.getLastName()).thenReturn("Hammami");
 
-            AccountToSave accountToSave = AccountToSave.create(userInfo);
+            AccountToSave accountToSave = AccountToSave.create(userInfo, iban);
 
             // when
             createAccount.run(userInfo);
