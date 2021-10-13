@@ -33,6 +33,10 @@ public class BankAccount {
         }
     }
 
+    public void depositMoney(Float amount) {
+        bankOperations.add(new BankOperation(BankOperationType.DEPOSIT, amount));
+    }
+
     private Float computeAccountBudget() {
         return bankOperations.stream().map(bankOperation -> {
             if (bankOperation.getBankOperationType().equals(BankOperationType.WITHDRAW)) {

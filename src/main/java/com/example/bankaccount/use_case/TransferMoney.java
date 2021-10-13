@@ -2,6 +2,7 @@ package com.example.bankaccount.use_case;
 
 import com.example.bankaccount.common.domain.AccountId;
 import com.example.bankaccount.common.domain.Iban;
+import com.example.bankaccount.common.domain.NotFoundBankAccount;
 import com.example.bankaccount.domain.transfer_money.BankAccount;
 import com.example.bankaccount.domain.transfer_money.BankAccountDao;
 import com.example.bankaccount.common.domain.WithdrawException;
@@ -16,12 +17,17 @@ public class TransferMoney {
         this.bankAccountDao = bankAccountDao;
     }
 
-    public void run(AccountId payerAccountId, Iban iban, Float amount) throws WithdrawException {
-        final Optional<BankAccount> optionalBankAccount = bankAccountDao.findById(payerAccountId);
-        if (optionalBankAccount.isPresent()) {
-            final BankAccount payerBankAccount = optionalBankAccount.get();
-            payerBankAccount.withdrawMoney(amount);
-            bankAccountDao.save(payerBankAccount);
+    public void run(AccountId payerAccountId, Iban iban, Float amount) throws WithdrawException, NotFoundBankAccount {
+        final Optional<BankAccount> optionalPayerBankAccount = bankAccountDao.findById(payerAccountId);
+        final Optional<BankAccount> optionalPayeeBankAccount = bankAccountDao.findByIban(iban);
+        if (!optionalPayerBankAccount.isPresent() || !optionalPayeeBankAccount.isPresent()) {
+            throw new NotFoundBankAccount();
         }
+        final BankAccount payerBankAccount = optionalPayerBankAccount.get();
+        final BankAccount payeeBankAccount = optionalPayeeBankAccount.get();
+        payerBankAccount.withdrawMoney(amount);
+        payeeBankAccount.depositMoney(amount);
+        bankAccountDao.save(payerBankAccount);
+        bankAccountDao.save(payeeBankAccount);
     }
 }

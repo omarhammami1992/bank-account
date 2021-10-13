@@ -10,5 +10,7 @@ import java.util.Optional;
 public interface AccountRepository extends CrudRepository<Account, Integer> {
 
     @Override
-    Optional<Account> findById(Integer integer);
+    Optional<Account> findById(Integer id);
+
+    Optional<Account> findByIban(String iban);
 }

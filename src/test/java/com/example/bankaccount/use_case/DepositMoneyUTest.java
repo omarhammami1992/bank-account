@@ -63,9 +63,9 @@ class DepositMoneyUTest {
             depositMoney.run(accountId, amount);
 
             // then
-            ArgumentCaptor<BankAccount> accountToSaveArgumentCaptor = ArgumentCaptor.forClass(BankAccount.class);
-            verify(bankAccountDao).save(accountToSaveArgumentCaptor.capture());
-            assertThat(accountToSaveArgumentCaptor.getValue()).usingRecursiveComparison().isEqualTo(expectedBankAccountToSave);
+            ArgumentCaptor<BankAccount> bankAccountArgumentCaptor = ArgumentCaptor.forClass(BankAccount.class);
+            verify(bankAccountDao).save(bankAccountArgumentCaptor.capture());
+            assertThat(bankAccountArgumentCaptor.getValue()).usingRecursiveComparison().isEqualTo(expectedBankAccountToSave);
         }
 
         @Test
