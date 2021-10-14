@@ -34,7 +34,7 @@ class WithdrawControllerUTest {
         private final Float amount = 26f;
 
         @Test
-        void return_200_when_user_account_is_created() {
+        void return_200_when_withdraw_operation_is_done() {
             // when
             final ResponseEntity responseEntity = withdrawController.withdraw(accountIdValue, amount);
 
