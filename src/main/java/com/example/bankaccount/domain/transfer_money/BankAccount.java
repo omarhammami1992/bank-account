@@ -2,6 +2,7 @@ package com.example.bankaccount.domain.transfer_money;
 
 import com.example.bankaccount.domain.common.AccountId;
 import com.example.bankaccount.domain.common.BankOperationType;
+import com.example.bankaccount.domain.common.BankServiceType;
 import com.example.bankaccount.domain.common.WithdrawException;
 
 import java.util.List;
@@ -27,14 +28,14 @@ public class BankAccount {
     public void withdrawMoney(Float amount) throws WithdrawException {
         final Float accountBudget = computeAccountBudget();
         if(accountBudget > amount) {
-            bankOperations.add(new BankOperation(BankOperationType.DEBIT, amount));
+            bankOperations.add(new BankOperation(BankOperationType.DEBIT, BankServiceType.TRANSFER, amount));
         } else {
             throw new WithdrawException();
         }
     }
 
     public void depositMoney(Float amount) {
-        bankOperations.add(new BankOperation(BankOperationType.CREDIT, amount));
+        bankOperations.add(new BankOperation(BankOperationType.CREDIT, BankServiceType.TRANSFER, amount));
     }
 
     private Float computeAccountBudget() {

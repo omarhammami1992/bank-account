@@ -1,9 +1,0 @@
-#
-#Wed Oct 13 17:37:06 CEST 2021
-com.example.bankaccount.infrastructure.withdraw_money.BDBankAccountDao=org.springframework.stereotype.Component
-com.example.bankaccount.BankAccountApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
-com.example.bankaccount.common.infrastructure.entity.Account=javax.persistence.Entity
-com.example.bankaccount.common.infrastructure.repository.AccountRepository=org.springframework.stereotype.Component,org.springframework.data.repository.Repository
-com.example.bankaccount.infrastructure.create_account.RandomIbanService=org.springframework.stereotype.Component
-com.example.bankaccount.infrastructure.create_account.BDAccountDao=org.springframework.stereotype.Component
-com.example.bankaccount.common.infrastructure.entity.Operation=javax.persistence.Entity

@@ -2,6 +2,7 @@ package com.example.bankaccount.infrastructure.transfer_money;
 
 import com.example.bankaccount.domain.common.AccountId;
 import com.example.bankaccount.domain.common.BankOperationType;
+import com.example.bankaccount.domain.common.BankServiceType;
 import com.example.bankaccount.domain.common.Iban;
 import com.example.bankaccount.infrastructure.common.entity.Account;
 import com.example.bankaccount.infrastructure.common.entity.Operation;
@@ -51,13 +52,14 @@ class BDBankAccountDaoUTest {
 
             final int operationId = 1;
             final BankOperationType bankOperationType = BankOperationType.CREDIT;
+            final BankServiceType bankServiceType = BankServiceType.DEPOSIT;
             final Float amount = 30f;
-            final Operation operation = new Operation(operationId, bankOperationType, amount);
+            final Operation operation = new Operation(operationId, bankOperationType, bankServiceType, amount);
 
             when(account.getOperations()).thenReturn(singletonList(operation));
             when(accountRepository.findById(accountIdValue)).thenReturn(Optional.of(account));
 
-            BankAccount expectedBankAccount = new BankAccount(accountId, singletonList(new BankOperation(operationId, bankOperationType, amount)));
+            BankAccount expectedBankAccount = new BankAccount(accountId, singletonList(new BankOperation(operationId, bankOperationType, bankServiceType, amount)));
 
             // when
             final Optional<BankAccount> optionalBankAccount = bankAccountDao.findById(accountId);
@@ -102,13 +104,14 @@ class BDBankAccountDaoUTest {
 
             final int operationId = 1;
             final BankOperationType bankOperationType = BankOperationType.CREDIT;
+            final BankServiceType bankServiceType = BankServiceType.DEPOSIT;
             final Float amount = 30f;
-            final Operation operation = new Operation(operationId, bankOperationType, amount);
+            final Operation operation = new Operation(operationId, bankOperationType, bankServiceType, amount);
 
             when(account.getOperations()).thenReturn(singletonList(operation));
             when(accountRepository.findByIban(iban.toString())).thenReturn(Optional.of(account));
 
-            BankAccount expectedBankAccount = new BankAccount(accountId, singletonList(new BankOperation(operationId, bankOperationType, amount)));
+            BankAccount expectedBankAccount = new BankAccount(accountId, singletonList(new BankOperation(operationId, bankOperationType, bankServiceType, amount)));
 
             // when
             final Optional<BankAccount> optionalBankAccount = bankAccountDao.findByIban(iban);
@@ -139,12 +142,13 @@ class BDBankAccountDaoUTest {
         void should_call_accountRepository() {
             // given
             final BankOperationType bankOperationType = BankOperationType.CREDIT;
+            final BankServiceType bankServiceType = BankServiceType.DEPOSIT;
             final float amount = 10f;
-            final BankOperation bankOperation = new BankOperation(bankOperationType, amount);
+            final BankOperation bankOperation = new BankOperation(bankOperationType, bankServiceType, amount);
             final int accountIdValue = 123;
             final BankAccount bankAccount = new BankAccount(new AccountId(accountIdValue), singletonList(bankOperation));
 
-            final Operation operation = new Operation(null, bankOperationType, amount);
+            final Operation operation = new Operation(null, bankOperationType, bankServiceType, amount);
 
             Account accountToSave = new Account(accountIdValue, singletonList(operation));
 

@@ -50,7 +50,7 @@ class TransferMoneyUTest {
 
             @BeforeEach
             void setUp() {
-                payerOldBankOperation = new BankOperation(1, BankOperationType.CREDIT, 1000f);
+                payerOldBankOperation = new BankOperation(1, BankOperationType.CREDIT, BankServiceType.DEPOSIT, 1000f);
                 final List<BankOperation> oldBankOperation = new ArrayList<>(singletonList(payerOldBankOperation));
 
                 BankAccount payerBankAccount = new BankAccount(payerAccountId, oldBankOperation);
@@ -63,7 +63,7 @@ class TransferMoneyUTest {
             @Test
             void should_update_payer_account() throws WithdrawException, NotFoundBankAccount {
                 // given
-                final List<BankOperation> payerBankOperationsToSave = asList(payerOldBankOperation, new BankOperation(BankOperationType.DEBIT, amount));
+                final List<BankOperation> payerBankOperationsToSave = asList(payerOldBankOperation, new BankOperation(BankOperationType.DEBIT, BankServiceType.TRANSFER, amount));
                 final BankAccount expectedPayerBankAccountToSave = new BankAccount(payerAccountId, payerBankOperationsToSave);
 
                 // when
@@ -78,7 +78,7 @@ class TransferMoneyUTest {
             @Test
             void should_update_payee_account() throws WithdrawException, NotFoundBankAccount {
                 // given
-                final BankAccount expectedPayeeBankAccountToSave = new BankAccount(payeeAccountId, singletonList(new BankOperation(BankOperationType.CREDIT, amount)));
+                final BankAccount expectedPayeeBankAccountToSave = new BankAccount(payeeAccountId, singletonList(new BankOperation(BankOperationType.CREDIT, BankServiceType.TRANSFER, amount)));
 
                 // when
                 transferMoney.run(payerAccountId, payeeIban, amount);

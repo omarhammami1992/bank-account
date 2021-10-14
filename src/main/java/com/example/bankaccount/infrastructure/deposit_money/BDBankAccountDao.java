@@ -41,13 +41,13 @@ public class BDBankAccountDao implements BankAccountDao {
 
     private List<Operation> buildOperations(List<BankOperation> bankOperations) {
         return bankOperations.stream()
-                .map(bankOperation -> new Operation(bankOperation.getId(), bankOperation.getBankOperationType(), bankOperation.getAmount()))
+                .map(bankOperation -> new Operation(bankOperation.getId(), bankOperation.getBankOperationType(), bankOperation.getBankServiceType(), bankOperation.getAmount()))
                 .collect(Collectors.toList());
     }
 
     private List<BankOperation> buildBankOperations(List<Operation> operations) {
         return operations.stream()
-                .map(operation -> new BankOperation(operation.getId(), operation.getBankOperationType(), operation.getAmount()))
+                .map(operation -> new BankOperation(operation.getId(), operation.getBankOperationType(), operation.getBankServiceType(), operation.getAmount()))
                 .collect(Collectors.toList());
     }
 }

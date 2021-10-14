@@ -1,6 +1,7 @@
 package com.example.bankaccount.infrastructure.common.entity;
 
 import com.example.bankaccount.domain.common.BankOperationType;
+import com.example.bankaccount.domain.common.BankServiceType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,11 +16,14 @@ public class Operation {
 
     private BankOperationType bankOperationType;
 
+    private BankServiceType bankServiceType;
+
     private Float amount;
 
-    public Operation(Integer id, BankOperationType bankOperationType, Float amount) {
+    public Operation(Integer id, BankOperationType bankOperationType, BankServiceType bankServiceType, Float amount) {
         this.id = id;
         this.bankOperationType = bankOperationType;
+        this.bankServiceType = bankServiceType;
         this.amount = amount;
     }
 
@@ -33,6 +37,10 @@ public class Operation {
 
     public BankOperationType getBankOperationType() {
         return bankOperationType;
+    }
+
+    public BankServiceType getBankServiceType() {
+        return bankServiceType;
     }
 
     public Float getAmount() {

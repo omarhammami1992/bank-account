@@ -2,6 +2,7 @@ package com.example.bankaccount.use_case;
 
 import com.example.bankaccount.domain.common.AccountId;
 import com.example.bankaccount.domain.common.BankOperationType;
+import com.example.bankaccount.domain.common.BankServiceType;
 import com.example.bankaccount.domain.deposit_money.BankAccount;
 import com.example.bankaccount.domain.deposit_money.BankAccountDao;
 import com.example.bankaccount.domain.deposit_money.BankOperation;
@@ -49,14 +50,14 @@ class DepositMoneyUTest {
             AccountId accountId = new AccountId(123);
             Float amount = 10f;
 
-            final BankOperation bankOperation1 = new BankOperation(1, BankOperationType.CREDIT, 10f);
-            final BankOperation bankOperation2 = new BankOperation(2, BankOperationType.CREDIT, 20f);
+            final BankOperation bankOperation1 = new BankOperation(1, BankOperationType.CREDIT, BankServiceType.DEPOSIT, 10f);
+            final BankOperation bankOperation2 = new BankOperation(2, BankOperationType.CREDIT, BankServiceType.DEPOSIT, 20f);
             final List<BankOperation> oldBankOperation = new ArrayList<>(asList(bankOperation1, bankOperation2));
 
             final BankAccount bankAccount = new BankAccount(accountId, oldBankOperation);
             when(bankAccountDao.find(accountId)).thenReturn(Optional.of(bankAccount));
 
-            final List<BankOperation> bankOperationsToSave = asList(bankOperation1, bankOperation2, new BankOperation(BankOperationType.CREDIT, amount));
+            final List<BankOperation> bankOperationsToSave = asList(bankOperation1, bankOperation2, new BankOperation(BankOperationType.CREDIT, BankServiceType.DEPOSIT, amount));
             final BankAccount expectedBankAccountToSave = new BankAccount(accountId, bankOperationsToSave);
 
             // when

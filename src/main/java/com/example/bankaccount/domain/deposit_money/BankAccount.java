@@ -2,6 +2,7 @@ package com.example.bankaccount.domain.deposit_money;
 
 import com.example.bankaccount.domain.common.AccountId;
 import com.example.bankaccount.domain.common.BankOperationType;
+import com.example.bankaccount.domain.common.BankServiceType;
 
 import java.util.List;
 
@@ -24,6 +25,6 @@ public class BankAccount {
     }
 
     public void depositMoney(Float amount) {
-        bankOperations.add(new BankOperation(BankOperationType.CREDIT, amount));
+        bankOperations.add(new BankOperation(BankOperationType.CREDIT, BankServiceType.DEPOSIT, amount));
     }
 }
