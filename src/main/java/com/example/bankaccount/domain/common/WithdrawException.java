@@ -1,4 +1,4 @@
 package com.example.bankaccount.domain.common;
 
-public class WithdrawException extends Exception{
+public class WithdrawException extends Exception {
 }

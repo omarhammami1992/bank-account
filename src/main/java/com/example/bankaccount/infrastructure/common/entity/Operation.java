@@ -3,10 +3,7 @@ package com.example.bankaccount.infrastructure.common.entity;
 import com.example.bankaccount.domain.common.BankOperationType;
 import com.example.bankaccount.domain.common.BankServiceType;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Operation {
@@ -20,11 +17,15 @@ public class Operation {
 
     private Float amount;
 
-    public Operation(Integer id, BankOperationType bankOperationType, BankServiceType bankServiceType, Float amount) {
+    @ManyToOne
+    private Integer accountId;
+
+    public Operation(Integer id, BankOperationType bankOperationType, BankServiceType bankServiceType, Float amount, Integer accountId) {
         this.id = id;
         this.bankOperationType = bankOperationType;
         this.bankServiceType = bankServiceType;
         this.amount = amount;
+        this.accountId = accountId;
     }
 
     public Operation() {

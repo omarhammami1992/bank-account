@@ -35,13 +35,13 @@ public class BDBankAccountDao implements BankAccountDao {
 
     @Override
     public void save(BankAccount bankAccount) {
-        final List<Operation> operations = buildOperations(bankAccount.getBankOperations());
+        final List<Operation> operations = buildOperations(bankAccount);
         accountRepository.save(new Account(bankAccount.getAccountId().getValue(), operations));
     }
 
-    private List<Operation> buildOperations(List<BankOperation> bankOperations) {
-        return bankOperations.stream()
-                .map(bankOperation -> new Operation(bankOperation.getId(), bankOperation.getBankOperationType(), bankOperation.getBankServiceType(), bankOperation.getAmount()))
+    private List<Operation> buildOperations(BankAccount bankAccount) {
+        return bankAccount.getBankOperations().stream()
+                .map(bankOperation -> new Operation(bankOperation.getId(), bankOperation.getBankOperationType(), bankOperation.getBankServiceType(), bankOperation.getAmount(), bankAccount.getAccountId().getValue()))
                 .collect(Collectors.toList());
     }
 

@@ -54,7 +54,7 @@ class BDBankAccountDaoUTest {
             final BankOperationType bankOperationType = BankOperationType.CREDIT;
             final BankServiceType bankServiceType = BankServiceType.DEPOSIT;
             final Float amount = 30f;
-            final Operation operation = new Operation(operationId, bankOperationType, bankServiceType, amount);
+            final Operation operation = new Operation(operationId, bankOperationType, bankServiceType, amount, accountIdValue);
 
             when(account.getOperations()).thenReturn(singletonList(operation));
             when(accountRepository.findById(accountIdValue)).thenReturn(Optional.of(account));
@@ -106,7 +106,7 @@ class BDBankAccountDaoUTest {
             final BankOperationType bankOperationType = BankOperationType.CREDIT;
             final BankServiceType bankServiceType = BankServiceType.DEPOSIT;
             final Float amount = 30f;
-            final Operation operation = new Operation(operationId, bankOperationType, bankServiceType, amount);
+            final Operation operation = new Operation(operationId, bankOperationType, bankServiceType, amount, accountIdValue);
 
             when(account.getOperations()).thenReturn(singletonList(operation));
             when(accountRepository.findByIban(iban.toString())).thenReturn(Optional.of(account));
@@ -148,7 +148,7 @@ class BDBankAccountDaoUTest {
             final int accountIdValue = 123;
             final BankAccount bankAccount = new BankAccount(new AccountId(accountIdValue), singletonList(bankOperation));
 
-            final Operation operation = new Operation(null, bankOperationType, bankServiceType, amount);
+            final Operation operation = new Operation(null, bankOperationType, bankServiceType, amount, accountIdValue);
 
             Account accountToSave = new Account(accountIdValue, singletonList(operation));
 
