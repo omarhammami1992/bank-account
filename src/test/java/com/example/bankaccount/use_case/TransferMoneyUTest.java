@@ -1,6 +1,6 @@
 package com.example.bankaccount.use_case;
 
-import com.example.bankaccount.common.domain.*;
+import com.example.bankaccount.domain.common.*;
 import com.example.bankaccount.domain.transfer_money.BankAccount;
 import com.example.bankaccount.domain.transfer_money.BankAccountDao;
 import com.example.bankaccount.domain.transfer_money.BankOperation;

@@ -1,8 +1,8 @@
 package com.example.bankaccount.infrastructure.create_account;
 
-import com.example.bankaccount.common.domain.Iban;
-import com.example.bankaccount.common.infrastructure.entity.Account;
-import com.example.bankaccount.common.infrastructure.repository.AccountRepository;
+import com.example.bankaccount.domain.common.Iban;
+import com.example.bankaccount.infrastructure.common.entity.Account;
+import com.example.bankaccount.infrastructure.common.repository.AccountRepository;
 import com.example.bankaccount.domain.create_account.AccountDao;
 import com.example.bankaccount.domain.create_account.AccountToSave;
 import org.junit.jupiter.api.BeforeEach;

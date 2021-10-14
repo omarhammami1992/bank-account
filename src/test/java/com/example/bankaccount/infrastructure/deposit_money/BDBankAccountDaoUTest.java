@@ -1,10 +1,10 @@
 package com.example.bankaccount.infrastructure.deposit_money;
 
-import com.example.bankaccount.common.domain.AccountId;
-import com.example.bankaccount.common.domain.BankOperationType;
-import com.example.bankaccount.common.infrastructure.entity.Account;
-import com.example.bankaccount.common.infrastructure.entity.Operation;
-import com.example.bankaccount.common.infrastructure.repository.AccountRepository;
+import com.example.bankaccount.domain.common.AccountId;
+import com.example.bankaccount.domain.common.BankOperationType;
+import com.example.bankaccount.infrastructure.common.entity.Account;
+import com.example.bankaccount.infrastructure.common.entity.Operation;
+import com.example.bankaccount.infrastructure.common.repository.AccountRepository;
 import com.example.bankaccount.domain.deposit_money.BankAccount;
 import com.example.bankaccount.domain.deposit_money.BankAccountDao;
 import com.example.bankaccount.domain.deposit_money.BankOperation;

@@ -1,10 +1,10 @@
 package com.example.bankaccount.infrastructure.transfer_money;
 
-import com.example.bankaccount.common.domain.AccountId;
-import com.example.bankaccount.common.domain.Iban;
-import com.example.bankaccount.common.infrastructure.entity.Account;
-import com.example.bankaccount.common.infrastructure.entity.Operation;
-import com.example.bankaccount.common.infrastructure.repository.AccountRepository;
+import com.example.bankaccount.domain.common.AccountId;
+import com.example.bankaccount.domain.common.Iban;
+import com.example.bankaccount.infrastructure.common.entity.Account;
+import com.example.bankaccount.infrastructure.common.entity.Operation;
+import com.example.bankaccount.infrastructure.common.repository.AccountRepository;
 import com.example.bankaccount.domain.transfer_money.BankAccount;
 import com.example.bankaccount.domain.transfer_money.BankAccountDao;
 import com.example.bankaccount.domain.transfer_money.BankOperation;

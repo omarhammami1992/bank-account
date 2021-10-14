@@ -1,6 +1,6 @@
 package com.example.bankaccount.domain.deposit_money;
 
-import com.example.bankaccount.common.domain.AccountId;
+import com.example.bankaccount.domain.common.AccountId;
 
 
 import java.util.Optional;

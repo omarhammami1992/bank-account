@@ -1,6 +1,6 @@
-package com.example.bankaccount.common.infrastructure.entity;
+package com.example.bankaccount.infrastructure.common.entity;
 
-import com.example.bankaccount.common.domain.BankOperationType;
+import com.example.bankaccount.domain.common.BankOperationType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

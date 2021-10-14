@@ -1,11 +1,11 @@
 package com.example.bankaccount.use_case;
 
-import com.example.bankaccount.common.domain.AccountId;
-import com.example.bankaccount.common.domain.Iban;
-import com.example.bankaccount.common.domain.NotFoundBankAccount;
+import com.example.bankaccount.domain.common.AccountId;
+import com.example.bankaccount.domain.common.Iban;
+import com.example.bankaccount.domain.common.NotFoundBankAccount;
 import com.example.bankaccount.domain.transfer_money.BankAccount;
 import com.example.bankaccount.domain.transfer_money.BankAccountDao;
-import com.example.bankaccount.common.domain.WithdrawException;
+import com.example.bankaccount.domain.common.WithdrawException;
 
 import java.util.Optional;
 

@@ -83,6 +83,24 @@
         "pattern": "com/example/bankaccount/common/infrastructure/repository/AccountRepository.class"
       },
       {
+        "pattern": "com/example/bankaccount/domain/common/AccountIdUTest$ConstructorShould.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/domain/common/AccountIdUTest$EqualsShould.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/domain/common/AccountIdUTest$toString.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/domain/common/IbanUTest$ConstructorShould.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/domain/common/IbanUTest$EqualsShould.class"
+      },
+      {
+        "pattern": "com/example/bankaccount/domain/common/IbanUTest$toString.class"
+      },
+      {
         "pattern": "com/example/bankaccount/domain/create_account/AccountDao.class"
       },
       {

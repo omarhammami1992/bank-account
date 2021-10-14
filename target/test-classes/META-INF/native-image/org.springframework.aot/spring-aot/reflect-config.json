@@ -149,6 +149,42 @@
     "allDeclaredClasses": true
   },
   {
+    "name": "com.example.bankaccount.domain.common.AccountIdUTest$ConstructorShould",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.domain.common.AccountIdUTest$EqualsShould",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.domain.common.AccountIdUTest$toString",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.domain.common.IbanUTest$ConstructorShould",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.domain.common.IbanUTest$EqualsShould",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.example.bankaccount.domain.common.IbanUTest$toString",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
     "name": "com.example.bankaccount.domain.create_account.AccountDao",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,

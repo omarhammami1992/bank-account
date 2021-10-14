@@ -1,6 +1,6 @@
 package com.example.bankaccount.domain.create_account;
 
-import com.example.bankaccount.common.domain.Iban;
+import com.example.bankaccount.domain.common.Iban;
 
 import static org.apache.logging.log4j.util.Strings.isBlank;
 

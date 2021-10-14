@@ -1,4 +1,4 @@
-package com.example.bankaccount.common.domain;
+package com.example.bankaccount.domain.common;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

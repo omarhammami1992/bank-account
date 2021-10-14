@@ -1,6 +1,6 @@
 package com.example.bankaccount.infrastructure.create_account;
 
-import com.example.bankaccount.common.domain.Iban;
+import com.example.bankaccount.domain.common.Iban;
 import com.example.bankaccount.domain.create_account.IbanService;
 import org.springframework.stereotype.Service;
 

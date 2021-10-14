@@ -1,8 +1,8 @@
 package com.example.bankaccount.infrastructure.withdraw_money;
 
-import com.example.bankaccount.common.domain.AccountId;
-import com.example.bankaccount.common.domain.NotFoundBankAccount;
-import com.example.bankaccount.common.domain.WithdrawException;
+import com.example.bankaccount.domain.common.AccountId;
+import com.example.bankaccount.domain.common.NotFoundBankAccount;
+import com.example.bankaccount.domain.common.WithdrawException;
 import com.example.bankaccount.use_case.WithdrawMoney;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

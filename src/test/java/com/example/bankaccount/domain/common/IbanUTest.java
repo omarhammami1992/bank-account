@@ -1,5 +1,7 @@
-package com.example.bankaccount.common.domain;
+package com.example.bankaccount.domain.common;
 
+import com.example.bankaccount.domain.common.Iban;
+import com.example.bankaccount.domain.common.MissingIbanException;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 

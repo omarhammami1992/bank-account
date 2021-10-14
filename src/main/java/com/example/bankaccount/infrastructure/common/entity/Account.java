@@ -1,4 +1,4 @@
-package com.example.bankaccount.common.infrastructure.entity;
+package com.example.bankaccount.infrastructure.common.entity;
 
 import javax.persistence.*;
 import java.util.List;

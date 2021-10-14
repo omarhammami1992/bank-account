@@ -1,6 +1,6 @@
-package com.example.bankaccount.common.infrastructure.repository;
+package com.example.bankaccount.infrastructure.common.repository;
 
-import com.example.bankaccount.common.infrastructure.entity.Account;
+import com.example.bankaccount.infrastructure.common.entity.Account;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

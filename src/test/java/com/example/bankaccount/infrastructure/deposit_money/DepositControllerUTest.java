@@ -1,7 +1,7 @@
 package com.example.bankaccount.infrastructure.deposit_money;
 
-import com.example.bankaccount.common.domain.AccountId;
-import com.example.bankaccount.common.domain.NotFoundBankAccount;
+import com.example.bankaccount.domain.common.AccountId;
+import com.example.bankaccount.domain.common.NotFoundBankAccount;
 import com.example.bankaccount.use_case.DepositMoney;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;

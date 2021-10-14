@@ -1,7 +1,7 @@
 package com.example.bankaccount.domain.transfer_money;
 
-import com.example.bankaccount.common.domain.AccountId;
-import com.example.bankaccount.common.domain.Iban;
+import com.example.bankaccount.domain.common.AccountId;
+import com.example.bankaccount.domain.common.Iban;
 
 import java.util.Optional;
 

@@ -1,6 +1,6 @@
 package com.example.bankaccount.domain.deposit_money;
 
-import com.example.bankaccount.common.domain.BankOperationType;
+import com.example.bankaccount.domain.common.BankOperationType;
 
 public class BankOperation {
 
